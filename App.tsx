@@ -11,6 +11,7 @@ import {createAppKit, defaultWagmiConfig, AppKit} from '@reown/appkit-wagmi-reac
 import {PersistQueryClientProvider} from '@tanstack/react-query-persist-client';
 import {mainnet, polygon} from '@wagmi/core/chains';
 import {WagmiProvider} from 'wagmi';
+import ConnectView from "@/components/ConnectView";
 
 
 const projectId = 'PROJECT_ID';
@@ -77,6 +78,9 @@ export default function App() {
                 >
                     App
                 </Text>
+
+                <ConnectView/>
+
                 <AppKit/>
             </QueryClientProvider>
         </WagmiProvider>
