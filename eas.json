@@ -1,0 +1,38 @@
+{
+  "cli": {
+    "version": ">= 13.1.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      },
+      "env": {
+        "APP_ENV": "development",
+        "NODE_ENV": "development",
+        "TAMAGUI_TARGET": "native",
+        "ANDROID_HOME": "/Users/andriibilianskyi/Library/Android/sdk"
+      },
+      "prebuildCommand": "prebuild --skip-dependency-update react",
+      "cache": {
+        "key": "auth-1-test"
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
